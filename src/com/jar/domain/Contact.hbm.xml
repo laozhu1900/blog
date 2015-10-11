@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.jar.domain.Contact" table="contacts" catalog="blog" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+
+        <property name="username" type="java.lang.String">
+            <column name="username" length="50"/>
+        </property>
+
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+
+        <property name="web" type="java.lang.String">
+            <column name="web"/>
+        </property>
+
+        <property name="advice" type="java.lang.String">
+            <column name="advice"/>
+        </property>
+
+        <property name="editTime" type="java.lang.Long">
+            <column name="edit_time"/>
+        </property>
+
+    </class>
+
+
+</hibernate-mapping>

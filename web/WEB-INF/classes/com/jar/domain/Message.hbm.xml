@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.jar.domain.Message" table="messages" catalog="blog" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+
+        <property name="username" type="java.lang.String">
+            <column name="username" length="50"/>
+        </property>
+
+        <property name="message" type="java.lang.String">
+            <column name="message" length="50"/>
+        </property>
+
+        <property name="editTime" type="java.lang.Long">
+            <column name="edit_time"/>
+        </property>
+
+        <property name="owner" type="java.lang.String">
+            <column name="owner"/>
+        </property>
+
+    </class>
+
+
+</hibernate-mapping>

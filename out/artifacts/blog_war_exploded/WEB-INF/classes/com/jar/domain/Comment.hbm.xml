@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.jar.domain.Comment" table="comments" catalog="blog">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+
+        <property name="context" type="java.lang.String">
+            <column name="context"/>
+        </property>
+
+        <property name="editTime" type="java.lang.Long">
+            <column name="edit_time"/>
+        </property>
+
+        <many-to-one name="user" class="com.jar.domain.User">
+            <column name="user_id"/>
+        </many-to-one>
+
+        <many-to-one name="article" class="com.jar.domain.Article">
+            <column name="article_id"/>
+        </many-to-one>
+
+    </class>
+
+</hibernate-mapping>

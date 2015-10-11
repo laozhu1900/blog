@@ -1,0 +1,35 @@
+
+
+table：
+
+    用户：
+    user：id，username,nickname，password,sex,birthday,register_date,last_login_ip,last_login_time,authority,email,head_pic,user_desc,
+          tellphone,
+
+
+    文章
+    article:id,author--->username,user_id,title,context,clicks,edit_date,comment_counts
+
+
+    分类表
+    java_article
+    hadoop_article
+    seience_article
+        ·
+        ·
+        ·
+        ·
+
+
+    评论表
+    comments：id,article_id,context,user_id,edit_date
+
+
+
+
+
+
+
+
+
+

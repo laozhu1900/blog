@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.jar.domain">
+
+    <class name="com.jar.domain.User" table="users" catalog="blog">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+
+        <property name="username" type="java.lang.String">
+            <column name="username" length="50"/>
+        </property>
+
+        <property name="password" type="java.lang.String">
+            <column name="password" length="50"/>
+        </property>
+        
+        <property name="email" type="java.lang.String">
+            <column name="email" length="50"/>
+        </property>
+
+        <property name="cellphone" type="java.lang.Integer">
+            <column name="cellphone" length="50"/>
+        </property>
+        
+        <property name="sex" type="java.lang.String">
+            <column name="sex" length="10"/>
+        </property>
+        
+        <property name="birthday" type="java.lang.Long">
+            <column name="birthday" length="20"/>
+        </property>
+
+        <property name="authority" type="java.lang.String">
+            <column name="authority" length="20"/>
+        </property>
+
+        <property name="lastLoginIp" type="java.lang.String">
+            <column name="last_login_ip" length="20"/>
+        </property>
+
+        <property name="lastLoginTime" type="java.lang.Long">
+            <column name="last_login_time" length="20"/>
+        </property>
+
+        <property name="registerTime" type="java.lang.Long">
+            <column name="register_time" length="20"/>
+        </property>
+
+        <property name="userDesc" type="java.lang.String">
+            <column name="user_desc"/>
+        </property>
+
+        <property name="headPic" type="java.sql.Blob">
+            <column name="head_pic"/>
+        </property>
+
+        <property name="emailVerifyCode" type="java.lang.Integer">
+            <column name="email_verify_code"/>
+        </property>
+    </class>
+
+
+</hibernate-mapping>

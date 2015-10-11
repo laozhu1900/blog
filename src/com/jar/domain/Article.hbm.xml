@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.jar.domain.Article" table="articles" catalog="blog" >
+       <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+       </id>
+
+        <property name="author" type="java.lang.String">
+            <column name="author" length="50"/>
+        </property>
+
+        <property name="context" type="java.lang.String">
+            <column name="context" />
+        </property>
+
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" length="12"/>
+        </property>
+        
+        <property name="commentCounts" type="java.lang.Integer">
+            <column name="comment_counts" length="20"/>
+        </property>
+
+        <property name="editTime" type="java.lang.Long">
+            <column name="edit_time" length="20"/>
+        </property>
+
+        <property name="category" type="java.lang.String">
+            <column name="category"/>
+        </property>
+
+        <property name="title" type="java.lang.String">
+            <column name="title"/>
+        </property>
+
+        <many-to-one name="user" class="com.jar.domain.User">
+            <column name="user_id" />
+        </many-to-one>
+
+    </class>
+
+
+</hibernate-mapping>
